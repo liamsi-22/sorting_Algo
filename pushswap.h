@@ -27,5 +27,20 @@ void sa(t_list *stack_a);
 void ra(t_list **stack_a);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void rra(t_list **stack_a);
+int checkdgts(char *str);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+t_list	*ft_lstbfrlast(t_list *lst);
+void sa(t_list *stack_a);
+void sb(t_list *stack_b);
+void ra(t_list **stack_a);
+void rb(t_list **stack_b);
+void pb(t_list **a, t_list **b);
+void pa(t_list **b, t_list **a);
+void rra(t_list **stack_a);
+void rrb(t_list **stack_b);
+void rr(t_list **a,t_list **b);
+void rrr(t_list **a,t_list **b);
+void ss(t_list *a,t_list *b);
 
 #endif
