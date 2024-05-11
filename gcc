@@ -1,0 +1,27 @@
+// gcc atoi.c check_minmax.c checkdouble.c checknumbers.c instructions_a.c instructions_a_b.c instructions_b.c join.c lst.c pushswap.c split.c stackinit.c
+
+    // printf("----------------\n");
+    // sort_3(&stack_a);
+    // // if(check_order(stack_a) == -1)
+    // //     printf("ghalat \n");
+    // // else 
+    // //     printf("sa7i7 \n");
+    // // pb(&stack_a, &stack_b);
+    // // pb(&stack_a, &stack_b);
+    // // pb(&stack_a, &stack_b);
+    // // pb(&stack_a, &stack_b);
+    // // ss(stack_a, stack_b);
+    // // rrr(&stack_a, &stack_b);
+    // // rrb(&stack_b);
+    // printf("-------a---------\n");
+    // while(stack_a)
+    // {
+    //     printf("%d\n",stack_a->x);
+    //     stack_a = stack_a->next;
+    // }
+    // // printf("-------b---------\n");
+    // // while(stack_b)
+    // // {
+    // //     printf("%d\n",stack_b->x);
+    // //     stack_b = stack_b->next;
+    // // }
