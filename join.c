@@ -6,18 +6,20 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 18:34:12 by iel-fagh          #+#    #+#             */
-/*   Updated: 2024/05/11 18:34:13 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2024/05/12 15:57:23 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-int ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
-    int i = 0;
-    while(str[i])
-        i++;
-    return i;
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
 char	*ft_strneww(size_t n)

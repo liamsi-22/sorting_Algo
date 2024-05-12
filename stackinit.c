@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 18:34:00 by iel-fagh          #+#    #+#             */
-/*   Updated: 2024/05/11 19:01:21 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:05:39 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
+
 int	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
@@ -30,6 +31,7 @@ int	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 	return (1);
 }
+
 t_list	*ft_lstnew(int x)
 {
 	t_list	*new;
@@ -56,18 +58,20 @@ void	ft_lstclear(t_list **lst)
 		}
 	}
 }
-t_list *stackinit(t_list *stack_a, char *str)
-{
-    int i;
 
-    i = 0;
-    char **st = ft_split(str,' ');
-    while (st[i])
-    {
-        if (ft_lstadd_back(&stack_a,ft_lstnew(ft_atoi(st[i]))) == 0)
+t_list	*stackinit(t_list *stack_a, char *str)
+{
+	int		i;
+	char	**st;
+
+	i = 0;
+	st = ft_split(str, ' ');
+	while (st[i])
+	{
+		if (ft_lstadd_back(&stack_a, ft_lstnew(ft_atoi(st[i]))) == 0)
 			ft_lstclear(&stack_a);
-        i++;
-    }
+		i++;
+	}
 	free(str);
-    return (stack_a);
+	return (stack_a);
 }

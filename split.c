@@ -6,37 +6,11 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 18:34:02 by iel-fagh          #+#    #+#             */
-/*   Updated: 2024/05/11 18:34:03 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:05:37 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	size_t	i;
-	size_t	j;
-	char	*str;
-
-	if (!s)
-		return (0);
-	str = (char *)malloc((len + 1));
-	i = 0;
-	j = 0;
-	if (!str)
-		return (NULL);
-	while (s[i])
-	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
-		i++;
-	}
-	str[j] = 0;
-	return (str);
-}
 
 size_t	words_count(char *str, char c)
 {
@@ -56,7 +30,7 @@ size_t	words_count(char *str, char c)
 		else if (str[i] == c)
 			i++;
 	}
-	return(count);
+	return (count);
 }
 
 size_t	words_len(char *s, char c)
@@ -79,7 +53,7 @@ void	free_array(int i, char **array)
 	free(array);
 }
 
-char	**split_o(char  *s, char c, char **array, size_t word_count)
+char	**split_o(char *s, char c, char **array, size_t word_count)
 {
 	size_t			i;
 	unsigned int	j;
@@ -104,7 +78,7 @@ char	**split_o(char  *s, char c, char **array, size_t word_count)
 	return (array);
 }
 
-char	**ft_split(char  *s, char c)
+char	**ft_split(char *s, char c)
 {
 	char	**array;
 	size_t	words;

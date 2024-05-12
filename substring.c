@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   substring.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/11 18:34:33 by iel-fagh          #+#    #+#             */
-/*   Updated: 2024/05/12 15:56:53 by iel-fagh         ###   ########.fr       */
+/*   Created: 2024/05/12 16:03:36 by iel-fagh          #+#    #+#             */
+/*   Updated: 2024/05/12 16:05:41 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-long long	ft_atoi(char *str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	long long	n;
-	int			sign;
-	int			i;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
+	if (!s)
+		return (0);
+	str = (char *)malloc((len + 1));
 	i = 0;
-	n = 0;
-	sign = 1;
-	while (str[i] && (str[i] == ' ' || str[i] == '\t'))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	j = 0;
+	if (!str)
+		return (NULL);
+	while (s[i])
 	{
-		if (str[i] == '-')
-			sign *= -1;
+		if (i >= start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}
 		i++;
 	}
-	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
-	{
-		n = n * 10 + (str[i] - '0');
-		i++;
-	}
-	return (sign * n);
+	str[j] = 0;
+	return (str);
 }
