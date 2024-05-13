@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 18:34:06 by iel-fagh          #+#    #+#             */
-/*   Updated: 2024/05/12 16:02:16 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2024/05/13 18:23:19 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	splt_25line(char *str, t_list **stack_a, t_list **stack_b)
 		exit(1);
 	}
 	*stack_a = stackinit(*stack_a, str);
+	free(str);
 	if (check_order(*stack_a) == -1)
 	{
 		if (ft_lstsize(*stack_a) == 2)
@@ -37,12 +38,13 @@ int	main(int ac, char **av)
 {
 	int		i;
 	char	*str;
+	char	*tmp;
 	t_list	*stack_a;
 	t_list	*stack_b;
 
 	stack_a = NULL;
 	stack_b = NULL;
-	str = " ";
+	str = ft_strdup(" ");
 	i = 1;
 	if (ac < 2)
 		return (1);
@@ -54,9 +56,9 @@ int	main(int ac, char **av)
 				free(str);
 			return (write(2, "Error\n", 6), 1);
 		}
-		str = ft_strjoin(str, ft_strjoin(av[i], " "));
-		i++;
+		tmp = ft_strjoin(av[i++], " ");
+		str = ft_strjoin_free(str, tmp);
 	}
 	splt_25line(str, &stack_a, &stack_b);
-	free(stack_a);
+	ft_lstclear(&stack_a);
 }

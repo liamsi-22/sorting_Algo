@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 18:34:00 by iel-fagh          #+#    #+#             */
-/*   Updated: 2024/05/12 16:05:39 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2024/05/13 18:23:01 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ t_list	*stackinit(t_list *stack_a, char *str)
 			ft_lstclear(&stack_a);
 		i++;
 	}
-	free(str);
+	i = 0;
+	free_arrayy(st);
 	return (stack_a);
 }

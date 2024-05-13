@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pushwap.h                                          :+:      :+:    :+:   */
+/*   pushswap.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:59:17 by iel-fagh          #+#    #+#             */
-/*   Updated: 2024/05/12 16:08:56 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2024/05/13 18:10:45 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <string.h>
 
 # define INTMAX 2147483647
 # define INTMIN -2147483648
@@ -31,11 +32,13 @@ typedef struct lst
 }				t_list;
 
 // utils functions ...
-char			*ft_strjoin(char const *s1, char const *s2);
-char			**ft_split(char *s, char c);
-long long		ft_atoi(char *str);
-int				ft_strlen(const char *str);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin_free(char *s1, char *s2);
+char			**ft_split(char *s, char c);
+int				ft_strlen(const char *str);
+char			*ft_strjoin(char *s1, char *s2);
+long long		ft_atoi(char *str);
+char			*ft_strdup(const char *s);
 
 // chwck error functions ...
 int				checknumbers(char *str);
@@ -53,6 +56,7 @@ t_list			*lst_min(t_list *lst);
 char			*ft_strneww(size_t n);
 int				ft_lstsize(t_list *lst);
 int				lst_max(t_list *lst);
+void			ft_lstclear(t_list **lst);
 
 // turk_algo functions ...
 t_list			*stackinit(t_list *stack_a, char *str);

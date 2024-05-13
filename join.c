@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 18:34:12 by iel-fagh          #+#    #+#             */
-/*   Updated: 2024/05/12 15:57:23 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2024/05/13 18:10:37 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,17 @@ char	*ft_strneww(size_t n)
 	return (str);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin_free(char *s1, char *s2)
+{
+	char	*result;
+
+	result = ft_strjoin(s1, s2);
+	free(s1);
+	free(s2);
+	return (result);
+}
+
+char	*ft_strjoin(char *s1, char *s2)
 {
 	int		i;
 	int		j;
@@ -43,8 +53,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	str = ft_strneww(ft_strlen(s1) + ft_strlen(s2));
-	if (!str)
+	if (str == NULL)
+	{
+		free(s1);
 		return (NULL);
+	}
 	while (s1[i])
 		str[j++] = s1[i++];
 	i = 0;
