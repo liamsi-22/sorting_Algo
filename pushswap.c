@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 18:34:06 by iel-fagh          #+#    #+#             */
-/*   Updated: 2024/05/13 18:23:19 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2024/05/13 19:21:44 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main(int ac, char **av)
 	str = ft_strdup(" ");
 	i = 1;
 	if (ac < 2)
-		return (1);
+		return (0);
 	while (av[i])
 	{
 		if ((!av[i][0]) || checkdgts(av[i]) == -1)

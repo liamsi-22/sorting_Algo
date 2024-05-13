@@ -6,7 +6,7 @@
 /*   By: iel-fagh <iel-fagh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 18:34:12 by iel-fagh          #+#    #+#             */
-/*   Updated: 2024/05/13 18:10:37 by iel-fagh         ###   ########.fr       */
+/*   Updated: 2024/05/13 18:42:24 by iel-fagh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,11 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	if (!s1 || !s2)
-		return (NULL);
+	if (!s1)
+	{
+		s1 = malloc(1);
+		*s1 = '\0';
+	}
 	str = ft_strneww(ft_strlen(s1) + ft_strlen(s2));
 	if (str == NULL)
 	{
