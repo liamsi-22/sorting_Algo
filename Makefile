@@ -1,6 +1,6 @@
 NAME = push_swap
-CC = gcc
-CFLAGS = #-Wall -Wextra -Werror
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
 
 SRC = atoi.c check_minmax.c checkdouble.c checknumbers.c turk_algo.c strdup.c\
       instructions_a.c instructions_a_b.c instructions_b.c join.c substring.c\
