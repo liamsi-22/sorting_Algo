@@ -4,33 +4,7 @@
 Efficiently sort data on a stack with a minimal set of instructions.
 
 This project focuses on optimizing sorting algorithms for stack-based data structures, aiming for the lowest possible number of actions.
-
-![License](https://img.shields.io/github/license/liamsi-22/sorting_Algo)
-![GitHub stars](https://img.shields.io/github/stars/liamsi-22/sorting_Algo?style=social)
-![GitHub forks](https://img.shields.io/github/forks/liamsi-22/sorting_Algo?style=social)
-![GitHub issues](https://img.shields.io/github/issues/liamsi-22/sorting_Algo)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/liamsi-22/sorting_Algo)
-![GitHub last commit](https://img.shields.io/github/last-commit/liamsi-22/sorting_Algo)
-
-<img src="https://img.shields.io/badge/language-C-blue.svg" alt="C">
-
 ## 📋 Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Demo](#demo)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [FAQ](#faq)
-- [License](#license)
-- [Support](#support)
-- [Acknowledgments](#acknowledgments)
 
 ## About
 
@@ -47,17 +21,6 @@ The core of the project is written in C, leveraging its efficiency and low-level
 - 🛠️ **Extensible**: Modular design allows for easy integration of new sorting strategies.
 - 📚 **Educational**: Provides clear examples and documentation for learning purposes.
 - 🔒 **Memory Conscious**: Designed to operate within limited memory constraints.
-
-## 🎬 Demo
-
-🔗 **Live Demo**: [https://github.com/liamsi-22/sorting_Algo](https://github.com/liamsi-22/sorting_Algo)
-
-### Screenshots
-![Sorting Visualization](screenshots/sorting_example.png)
-*Example of the sorting algorithm in action*
-
-![Stack Representation](screenshots/stack_representation.png)  
-*Visual representation of the stack data structure*
 
 ## 🚀 Quick Start
 
@@ -157,40 +120,6 @@ sorting_Algo/
 └── 📄 LICENSE              # License file
 ```
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Quick Contribution Steps
-1. 🍴 Fork the repository
-2. 🌟 Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. ✅ Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. 📤 Push to the branch (`git push origin feature/AmazingFeature`)
-5. 🔃 Open a Pull Request
-
-### Development Setup
-```bash
-# Fork and clone the repo
-git clone https://github.com/yourusername/sorting_Algo.git
-
-# Compile the program
-make
-
-# Create a new branch
-git checkout -b feature/your-feature-name
-
-# Make your changes and test
-./sorting_algorithm [test numbers]
-
-# Commit and push
-git commit -m "Description of changes"
-git push origin feature/your-feature-name
-```
-
-### Code Style
-- Follow existing code conventions
-- Use descriptive variable names
-- Add comments to explain complex logic
 
 ## Testing
 
@@ -212,27 +141,5 @@ A: You can explore different sorting strategies, such as using different pivot s
 **Q: What are the limitations of this sorting algorithm?**
 A: The algorithm is designed for stack-based data, which may not be suitable for all sorting scenarios.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### License Summary
-- ✅ Commercial use
-- ✅ Modification
-- ✅ Distribution
-- ✅ Private use
-- ❌ Liability
-- ❌ Warranty
-
-## 💬 Support
-
-- 📧 **Email**: your.email@example.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/liamsi-22/sorting_Algo/issues)
-- 📖 **Documentation**: [Full Documentation](https://docs.your-site.com)
-
-## 🙏 Acknowledgments
-
 - 📚 **Libraries used**:
   - Standard C Libraries
-- 👥 **Contributors**: Thanks to all [contributors](https://github.com/liamsi-22/sorting_Algo/contributors)
-```
